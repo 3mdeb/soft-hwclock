@@ -16,8 +16,8 @@ Before=shutdown.target time-sync.target ntpdate.service ntpd.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/opt/soft-hwclock/soft-hwclock load
-ExecStop=/opt/soft-hwclock/soft-hwclock save
+ExecStart=/usr/bin/soft-hwclock load
+ExecStop=/usr/bin/soft-hwclock save
 
 [Install]
 WantedBy=multi-user.target
